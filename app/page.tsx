@@ -1,30 +1,19 @@
-export default function Page() {
-    return <h1>Home page for RateMe service</h1>
-}
 
-// import 'app/ui/global.css';
-// import {inter} from './ui/fonts';
-// import {Metadata} from 'next';
+import Link from "next/link";
+import Button from "./components/Button";
 
-// export const metadata: Metadata = {
-//   title: {
-//     template: '%s |Acme Dashboard',
-//     default: 'Acme Dashboard',
-//   },
-//   description: 'The official Next.js Course Dashboard weith APP Router',
-//   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
-// };
+const Home = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <>
+            <Button>grtgrtg</Button>
 
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body className={`${inter.className} antialiased`}>{children}</body>
-//     </html>
-//   );
-// }
+            <h1> Домашняя страничка RateMe</h1>
+            {children}
 
-// example for home page data
+            <Link href='/profile'>Profile</Link>
+            <Link href='/rating'>Rating</Link>
+        </>
+    )
+};
+
+export default Home;

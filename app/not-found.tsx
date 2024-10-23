@@ -1,1 +1,5 @@
-// not found ui
+const NotFound = () => {
+    return <div>not found</div>
+}
+
+export default NotFound

@@ -1,10 +1,13 @@
 import {Metadata} from 'next';
 
 export const metadata: Metadata = {
-    title: 'RateMe',
+    title: {
+      template: '%s | RateMe',
+      default: 'RateMe',
+    },
+    description: 'Service for Business rating'
 };
 
-// shared ui for all pages(like header/footer)
 
 export default function RootLayout({
     children,
@@ -12,11 +15,30 @@ export default function RootLayout({
     children: React.ReactNode
   }) {
     return (
-      <html lang="en">
+      <html lang="ru">
         <body>
-          {/* Layout UI */}
+          <header>HEADER</header>
           <main>{children}</main>
+          <footer>FOOTER</footer>
         </body>
       </html>
     )
   }
+
+  // i18 для перевода страницы 
+
+// import 'app/ui/global.css';
+// import {inter} from './ui/fonts';
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html lang="en">
+//       <body className={`${inter.className} antialiased`}>{children}</body>
+//     </html>
+//   );
+// }
+

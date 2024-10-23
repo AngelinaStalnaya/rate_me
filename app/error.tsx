@@ -1,0 +1,1 @@
+// error ui for the app

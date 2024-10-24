@@ -18,6 +18,7 @@ const CompanyRating = () => {
 
 
             <h1>Company name</h1>
+            <h3>Address</h3>
 
 
             <div>

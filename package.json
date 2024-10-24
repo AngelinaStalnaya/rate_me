@@ -16,10 +16,18 @@
   "author": "Angelina Stalnaya",
   "license": "MIT",
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@tailwindcss/forms": "^0.5.9",
+    "@vercel/postgres": "^0.10.0",
+    "clsx": "^2.1.1",
+    "lint": "^0.8.19",
     "next": "^14.2.15",
+    "next-auth": "^4.24.8",
     "node": "^22.10.0",
+    "postcss": "^8.4.47",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.14"
   },
   "engines": {
     "node": ">=20.12.0"

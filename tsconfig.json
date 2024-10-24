@@ -23,14 +23,18 @@
     ]
   },
   "baseUrl": ".",
-      "paths": {
-        "@/.*": ["./*"]
-      },
+  "paths": {
+    "@/components/*": [
+      "components/*"
+    ],
+    "@/*": ["./*"]
+  },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "app/components/*"
   ],
   "exclude": [
     "node_modules"

@@ -1,9 +1,7 @@
-export async function GET() {
+import { sql } from "@vercel/postgres";
 
-    const comments = [
-        {id: 1, com: 'rtgrtg'},
-        {id: 2, com: 'juugjmfn'},
-]
-    
-    return new Response(JSON.stringify(comments))
+
+export async function CompanyData({companyId}: {companyId:string}) {
+    const companyData = await sql`SELECT * FROM companies WHERE company_id = ${companyId};`;
+    return companyData;
 }

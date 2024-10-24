@@ -4,12 +4,12 @@ const metadata: Metadata = {
     title: 'name'
 }
 
-export default function Profile({ companyName }: { companyName: String }) {
-    const rateNum = 4.9
+export default function Profile() {
+    const rateNum = 4.9;
     return (
         <>
             <h1>
-                Имя компании
+                Имя компании 
             </h1>
             <span>Текущий рейтинг: {rateNum}</span>
             <table>

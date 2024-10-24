@@ -11,12 +11,11 @@ const metadata: Metadata = {
 
 // }
 
-export default function Rating({ children }: { children: React.ReactNode }) {
+export default function Rating() {
     return (
         <>
             <h2>Выберите компанию для оценки: </h2>
             <p>тут будет поиск и список конмпаний для оценки</p>
-            <div>{children}</div>
         </>
     )
 }

@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Montserrat, Caveat } from 'next/font/google';
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import clsx from "clsx";
+import Header from './components/Header';
 
 export const metadata: Metadata = {
   title: "Rate Me App for Business",
   description: "Created by Angelina Stalnaya",
 };
+
+export const montserrat = Montserrat({
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
+
+export const caveat = Caveat({
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
@@ -24,12 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" className="h-full bg-white">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={clsx('h-full', montserrat.className)}
       >
-        <header>HEADER</header>
-        <main>{children}</main>
+        <Header/>
+        <main className="flex items-center justify-center md:h-screen">{children}</main>
         <footer>FOOTER</footer>
       </body>
     </html>

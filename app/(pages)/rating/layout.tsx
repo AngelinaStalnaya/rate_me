@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description: "Rating page of a Company",
 };
 
-export default function RootLayout({
+export default function RatingLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

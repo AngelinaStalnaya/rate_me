@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Companie`s personal data",
 };
 
-export default function RootLayout({
+export default function ProfileLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

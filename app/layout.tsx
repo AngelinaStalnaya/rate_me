@@ -3,6 +3,7 @@ import { montserrat } from './fonts/fonts';
 import "./globals.css";
 import clsx from "clsx";
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: "Rate Me App for Business",
@@ -21,7 +22,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex items-center justify-center md:h-screen">{children}</main>
-        <footer>FOOTER</footer>
+        <Footer />
       </body>
     </html>
   );

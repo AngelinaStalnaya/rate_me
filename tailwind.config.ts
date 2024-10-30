@@ -7,17 +7,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        montserrat: ['var(--font-montserrat)'],
-        caveat: ['var(--font-caveat'],
-      }
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/forms')
+  ],
 };
 export default config;
